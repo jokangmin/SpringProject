@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="userSQL"> -->
+<mapper namespace="user.dao.UserDAO">
+	<!-- user id 회원체크 -->
+	<select id="checkId" resultType="String">
+		select name from usertable where id = #{id}
+	</select>
+	
+	<!-- user 입력 -->
+	<insert id="write" parameterType="user">
+		insert into usertable values(#{name}, #{id}, #{pwd})
+	</insert>
+	
+	<!-- user 출력 -->
+	<select id="getUserList" resultType="user">
+		select * from usertable limit #{startNum}, #{endNum}
+	</select>
+	
+	<!-- getTotalA -->
+	<select id="getTotalA" resultType="int">
+		select count(*) from usertable
+	</select>
+	
+	<!-- user 수정 -->
+	<update id="update">
+		update usertable set name=#{name}, pwd=#{pwd} where id=#{id}
+	</update>
+	<!-- user 삭제 -->
+	<delete id="delete">
+		delete from usertable where id=#{id}
+	</delete>
+	
+	<!-- image board -->
+	<!-- SQL문을 실행할 때, 넘어오는 파라메터 타입이 List일 경우 forEach 태그의 collection 속성에 사용할 수 있는 이름은 list 또는 collection이 가능하다. 
+	<insert id="imageWrite">
+	    insert into userUpload (imageName, imageContent, imageFileName, imageOriginalFileName)
+	    values
+	    <foreach collection="list" item="dto" separator=",">
+	    	(#{dto.imageName}, #{dto.imageContent}, #{dto.imageFileName}, #{dto.imageOriginalFileName})
+	    </foreach>
+	</insert>
+	-->
+	<!-- image 입력 -->
+	<insert id="imageWrite" parameterType="user.bean.UserUploadDTO">
+	    insert into userUpload (imageName, imageContent, imageFileName, imageOriginalFileName)
+	    values (#{imageName}, #{imageContent}, #{imageFileName}, #{imageOriginalFileName})
+	</insert>
+	
+	<!-- image 출력 -->
+	<select id="getImageList" resultType="user.bean.UserUploadDTO">
+		select * from userUpload order by seq desc limit #{startNum}, #{endNum}
+	</select>
+	
+	<!-- image view -->
+	<select id="getUploadDTO" parameterType="String" resultType="user.bean.UserUploadDTO">
+		select * from userUpload where seq=#{seq}
+	</select>
+	
+	<!-- image get ImageFileName -->
+	<select id="getImageFileName" parameterType="int" resultType="String">
+		select imageFileName from userUpload where seq=#{seq}
+	</select>
+	
+	<!-- image update (NCP)-->
+	<update id="uploadUpdate" parameterType="user.bean.UserUploadDTO">
+		update userUpload set imageName=#{imageName},
+							  imageContent=#{imageContent},
+			 				  imageFileName=#{imageFileName},
+			 				  imageOriginalFileName=#{imageOriginalFileName}
+		where seq=#{seq}
+	</update>
+	
+	<!-- getTotalB -->
+	<select id="getTotalB" resultType="int">
+		select count(*) from userUpload
+	</select>
+	
+	<!-- image delete -->
+	<delete id="uploadDelete" parameterType="list">
+	    delete from userUpload where seq in
+	    <foreach item="seq" collection="list" open="(" separator="," close=")">
+	        #{seq}
+	    </foreach>
+	</delete>
+	
+</mapper>
