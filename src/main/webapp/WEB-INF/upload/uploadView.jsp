@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/uploadview.css">
 </head>
 <body>
-<img alt="로고" src="../image/odiga_logo.png" id="logo_image" onclick="location='http://localhost:8080/spring/'" style="cursor: pointer; width:130px; height:65px;">
+<img alt="로고" src="../image/odiga_logo.png" id="logo_image" onclick="location='http://223.130.162.170:8090/spring/'" style="cursor: pointer; width:130px; height:65px;">
 <table border="1" class="view">
 	<tr>
 		<td rowspan="3">

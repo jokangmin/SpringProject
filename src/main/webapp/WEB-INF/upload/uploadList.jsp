@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../css/board.css">
 </head>
 <body>
-<img alt="로고" src="../image/odiga_logo.png" id="logo_image" onclick="location='http://localhost:8080/spring/'" style="cursor: pointer; width:130px; height:65px;">
+<img alt="로고" src="../image/odiga_logo.png" id="logo_image" onclick="http://223.130.162.170:8090/spring/'" style="cursor: pointer; width:130px; height:65px;">
 	<section class="notice">
 	  <div class="page-title">
 	        <div class="container">

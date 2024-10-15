@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/writeForm.css">
 </head>
 <body>
-	<img alt="로고" src="../image/odiga_logo.png" id="logo_image" onclick="location='http://localhost:8080/spring/'" style="cursor: pointer;">
+	<img alt="로고" src="../image/odiga_logo.png" id="logo_image" onclick="location='http://223.130.162.170:8090/spring/'" style="cursor: pointer;">
 	<form id="uploadAJaxForm">
 		<table border="1">
 			<tr>

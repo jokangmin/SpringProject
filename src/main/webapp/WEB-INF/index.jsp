@@ -23,7 +23,7 @@
 		      	</g>
 		    </svg>
 	  	</button>
-		<button type="button" onclick="location.href='http://localhost:8080/spring/user/writeForm'">
+		<button type="button" onclick="location.href='http://223.130.162.170:8090/spring/user/writeForm'">
 		    <span>SignUp</span>
 		    <span class="material-symbols-outlined" aria-hidden="true">SignUp</span>
 		    <svg viewBox="0 0 300 300" aria-hidden="true">
@@ -37,7 +37,7 @@
 		      	</g>
 		    </svg>
 		 </button>
-		  <button type="button" onclick="location.href='http://localhost:8080/spring/user/getUserList'">
+		  <button type="button" onclick="location.href='http://223.130.162.170:8090/spring/user/getUserList'">
 		    <span>Services</span>
 		    <span class="material-symbols-outlined" aria-hidden="true">Board</span>
 		    <svg viewBox="0 0 300 300" aria-hidden="true">
@@ -51,7 +51,7 @@
 			      </g>
 		    </svg>
 		  </button>
-		  <button type="button" onclick="location.href='http://localhost:8080/spring/upload/uploadForm'">
+		  <button type="button" onclick="location.href='http://223.130.162.170:8090/spring/upload/uploadForm'">
 		    <span>File</span>
 		    <span class="material-symbols-outlined" aria-hidden="true">Upload</span>
 		    <svg viewBox="0 0 300 300">
@@ -65,7 +65,7 @@
 			      </g>
 		    </svg>
 		  </button>
-		  <button type="button" onclick="location.href='http://localhost:8080/spring/upload/uploadAJaxForm'">
+		  <button type="button" onclick="location.href='http://223.130.162.170:8090/spring/upload/uploadAJaxForm'">
 		    <span>File AJAX</span>
 		    <span class="material-symbols-outlined" aria-hidden="true">Upload AJAX</span>
 		    <svg viewBox="0 0 300 300">
@@ -80,7 +80,7 @@
 		    </svg>
 		  </button>
 		  
-		  <button type="button" onclick="location.href='http://localhost:8080/spring/upload/uploadList'">
+		  <button type="button" onclick="location.href='http://223.130.162.170:8090/spring/upload/uploadList'">
 		    <span>Image List</span>
 		    <span class="material-symbols-outlined" aria-hidden="true">Image List</span>
 		    <svg viewBox="0 0 300 300">
@@ -96,7 +96,7 @@
 		  </button>
 		  
 		  
-		   <button type="button" onclick="location.href='http://localhost:8080/spring/upload/text'">
+		   <button type="button" onclick="location.href='http://223.130.162.170:8090/spring/upload/text'">
 		    <span>test</span>
 		    <span class="material-symbols-outlined" aria-hidden="true">test</span>
 		    <svg viewBox="0 0 300 300">
